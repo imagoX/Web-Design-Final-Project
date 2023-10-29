@@ -17,9 +17,9 @@
     </script>
 </head>
 
-<body class="font-iYekan box-border">
+<body class="font-iYekan box-border dark:bg-sky-900">
 <div class="left-5 bottom-5 fixed">
-    <button class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+    <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
             type="button">
         <svg class="hidden w-5 h-5" fill="currentColor" id="theme-toggle-dark-icon" viewBox="0 0 20 20"
@@ -34,17 +34,23 @@
         </svg>
     </button>
 </div>
-<header class="mx-0 bg-sky-100 dark:bg-sky-950 flex items-center">
-    <div class="w-1/4">
+<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer"
+        id="backToTop">
+    Back to Top
+</button>
+<header class="mx-0 bg-sky-100 dark:bg-sky-950 flex items-center justify-stretch">
+    <div class="w-1/4 h-auto px-5">
         <div class="">
             <a href="">
-                <img alt="واحدِ پژوهشِ شخصیت" class="dark:" src="../assets/img/PRU_long_logo_light_transparent.svg">
+                <img alt="واحد پژوهش شخصیت" class="dark:hidden" src="../assets/img/PRU_long_logo_light_transparent.svg">
+                <img alt="واحد پژوهش شخصیت" class="hidden dark:block"
+                     src="../assets/img/PRU_long_logo_dark_transparent.svg">
             </a>
         </div>
 
     </div>
-    <div class="w-1/2">
 
+    <div class="w-1/2">
         <form>
             <label class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
                    for="default-search">جستجو</label>
@@ -52,30 +58,33 @@
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400"
                          fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor"
+                              stroke-linecap="round" stroke-linejoin="round"
                               stroke-width="2"/>
                     </svg>
                 </div>
-                <input class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="default-search"
+                <input class="block text-end placeholder:text-end w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                       id="default-search"
                        placeholder="جستجو کنید..."
                        required type="search">
-                <button class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                <button class="text-white absolute right-2.5 bottom-2.5 bg-slate-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:text-slate-800 dark:bg-slate-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         type="submit">
                     جستجو
                 </button>
             </div>
         </form>
-
-
     </div>
+
     <div class="w-1/4">
-        <div class="flex items-center dark:text-white">
-            <div>
-                ورود
-            </div>
-            <div class=""> |</div>
-            <div>
-                ثبت نام
+        <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-100">
+            <div class="flex justify-center items-center">
+                <div>
+                    ورود
+                </div>
+                <pre> | </pre>
+                <div>
+                    ثبت نام
+                </div>
             </div>
         </div>
     </div>
