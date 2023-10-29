@@ -16,7 +16,6 @@
         }
     </script>
 </head>
-
 <body class="font-iYekan box-border dark:bg-sky-900">
 <div class="left-5 bottom-5 fixed">
     <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
@@ -38,7 +37,7 @@
         id="backToTop">
     Back to Top
 </button>
-<header class="mx-0 bg-sky-100 dark:bg-sky-950 flex items-center justify-stretch">
+<header class="mx-0 bg-sky-100 dark:bg-sky-950 flex items-center justify-stretch py-3">
     <div class="w-1/4 h-auto px-5">
         <div class="">
             <a href="">
@@ -79,11 +78,11 @@
         <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-100">
             <div class="flex justify-center items-center">
                 <div>
-                    ورود
+                    <a href="" data-cursor-text="ورود" class="">ورود</a>
                 </div>
-                <pre> | </pre>
+                <div class="mx-3 h-[20px]  bg-sky-100 dark:bg-sky-800 w-[1px]"></div>
                 <div>
-                    ثبت نام
+                    <a href="" data-cursor-text="ثبت نام">ثبت نام</a>
                 </div>
             </div>
         </div>
@@ -144,6 +143,18 @@
         hideOnLeave: true,
         hideTimeout: 300,
         hideMediaTimeout: 300
+    });
+</script>
+<script>
+    const cursor = new MouseFollower();
+    const el = document.querySelector('.my-element');
+
+    el.addEventListener('mouseenter', () => {
+        cursor.setText('');
+    });
+
+    el.addEventListener('mouseleave', () => {
+        cursor.removeText();
     });
 </script>
 <script src="../assets/js/script.js"></script>
