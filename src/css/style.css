@@ -2,8 +2,19 @@
 @tailwind components;
 
 @font-face {
-  font-family: 'iranYekan';
-  src: url(../../assets/fonts/Yekan-Font-3.0/Yekan.ttf) format('truetype');
+    font-family: 'iranYekan';
+    src: url(../../assets/fonts/Yekan-Font-3.0/Yekan.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'iranSans';
+    src: url(../../assets/fonts/iran-sans-master/fonts/IranianSansRegular.ttf) format('truetype');
+}
+
+@layer components {
+    .active {
+        @apply bg-sky-200 dark:bg-slate-700 rounded;
+    }
 }
 
 @tailwind utilities;

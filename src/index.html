@@ -6,6 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>واحدِ پژوهشِ شخصیت</title>
     <link href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+          rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/img/icon1.svg" rel="icon">
     <script>
@@ -16,7 +18,7 @@
         }
     </script>
 </head>
-<body class="font-iYekan box-border dark:bg-sky-900">
+<body class="font-iYekan box-border dark:bg-sky-950 bg-gray-50">
 <div class="left-5 bottom-5 fixed">
     <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
@@ -37,12 +39,15 @@
         id="backToTop">
     Back to Top
 </button>
-<header class="mx-0 bg-sky-100 dark:bg-sky-950 flex items-center justify-stretch py-3">
+<header class="mx-0 my-0 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
     <div class="w-1/4 h-auto px-5">
         <div class="">
             <a href="">
-                <img alt="واحد پژوهش شخصیت" class="dark:hidden" src="../assets/img/PRU_long_logo_light_transparent.svg">
+                <img alt="واحد پژوهش شخصیت" class="dark:hidden"
+                     data-cursor-img="../assets/img/PRU_logo_light_transparent.svg"
+                     src="../assets/img/PRU_long_logo_light_transparent.svg">
                 <img alt="واحد پژوهش شخصیت" class="hidden dark:block"
+                     data-cursor-img="../assets/img/PRU_logo_dark_transparent.svg"
                      src="../assets/img/PRU_long_logo_dark_transparent.svg">
             </a>
         </div>
@@ -62,11 +67,11 @@
                               stroke-width="2"/>
                     </svg>
                 </div>
-                <input class="block text-end placeholder:text-end w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                <input class="block text-end placeholder:text-end w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-3xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                        id="default-search"
                        placeholder="جستجو کنید..."
                        required type="search">
-                <button class="text-white absolute right-2.5 bottom-2.5 bg-slate-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:text-slate-800 dark:bg-slate-400 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                <button class="text-white absolute right-2.5 bottom-2.5 bg-slate-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 dark:text-slate-800 dark:bg-slate-300 dark:hover:text-blue-50 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         type="submit">
                     جستجو
                 </button>
@@ -75,14 +80,14 @@
     </div>
 
     <div class="w-1/4">
-        <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-100">
-            <div class="flex justify-center items-center">
+        <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
+            <div class="flex justify-center align-middle items-center">
                 <div>
-                    <a href="" data-cursor-text="ورود" class="">ورود</a>
+                    <a class="" data-cursor-text="ورود" href="">ورود</a>
                 </div>
-                <div class="mx-3 h-[20px]  bg-sky-100 dark:bg-sky-800 w-[1px]"></div>
+                <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
                 <div>
-                    <a href="" data-cursor-text="ثبت نام">ثبت نام</a>
+                    <a data-cursor-text="ثبت نام" href="">ثبت نام</a>
                 </div>
             </div>
         </div>
@@ -90,8 +95,56 @@
 </header>
 
 
-<main>
+<main class="flex">
+    <aside class="page-sidebar w-1/4 bg-sky-100 dark:bg-sky-900 fixed h-screen border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
+        <h3 class="c-aside_title text-end mt-5">
+            <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle">menu</i>
+        </h3>
+        <ul class="sidebar-menu mt-5 mx-10">
+            <li class="py-4 border-b border-sky-950 dark:border-sky-50">
+                <a class="aside-link flex items-center justify-between p-3" href="#">
+                    <span class="text-lg font-iSans">تست ها</span>
+                    <i class="material-icons chevron-icon">chevron_left</i>
+                </a>
+                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">مایرز-بریگز</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انیاگرام</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">سوشیونیکز</a>
+                </div>
+            </li>
+            <li class="py-4 border-b c-blog_href border-sky-950 dark:border-sky-50">
+                <a class="aside-link flex items-center justify-between p-3" href="./blog.html">
+                    <span class="text-lg font-iSans">مقالات</span>
+                    <i class="material-icons chevron-icon">chevron_left</i>
+                </a>
+                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">شخصیت شولتز</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">شخصیت از نگاه یونگ</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">درون گرایی و برون گرایی</a>
+                </div>
+            </li>
+            <li class="c-no_slide py-4 border-b border-sky-950 dark:border-sky-50">
+                <a class="aside-link flex items-center justify-between p-3" href="#">
+                    <span class="text-lg font-iSans">دیتابیس</span>
+                </a>
+            </li>
+            <li class="py-4">
+                <a class="aside-link flex items-center justify-between p-3" href="#">
+                    <span class="text-lg font-iSans">انجمن</span>
+                    <i class="material-icons chevron-icon">chevron_left</i>
+                </a>
+                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">انجمن واحد پژوهش شخصیت</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن مقالات</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن دیتابیس</a>
+                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن کاربران</a>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <div class="bg-gray-50">
 
+    </div>
 </main>
 
 
@@ -155,6 +208,18 @@
 
     el.addEventListener('mouseleave', () => {
         cursor.removeText();
+    });
+</script>
+<script>
+    const cursor = new MouseFollower();
+    const el = document.querySelector('.my-element');
+
+    el.addEventListener('mouseenter', () => {
+        cursor.setImg('')
+    });
+
+    el.addEventListener('mouseleave', () => {
+        cursor.removeImg()
     });
 </script>
 <script src="../assets/js/script.js"></script>

@@ -10,7 +10,8 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                'iYekan': ['iranYekan']
+                'iYekan': ['iranYekan'],
+                'iSans' : ['iranSans'],
             },
         },
     },
