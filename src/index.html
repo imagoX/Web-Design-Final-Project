@@ -18,7 +18,7 @@
         }
     </script>
 </head>
-<body class="font-iYekan box-border dark:bg-sky-950 bg-gray-50">
+<body class="font-pfont box-border dark:bg-sky-950 bg-gray-50">
 <div class="left-5 bottom-5 fixed">
     <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
@@ -35,12 +35,12 @@
         </svg>
     </button>
 </div>
-<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer"
-        id="backToTop">
-    Back to Top
+<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer" id="backToTop">
+    <i class="material-icons">keyboard_arrow_up</i>
 </button>
-<header class="mx-0 my-0 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
-    <div class="w-1/4 h-auto px-5">
+<header class="sticky top-0 z-10 w-full mx-0 h-auto my-0 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50"
+        id="sticky-header">
+    <div class="w-1/4  px-5">
         <div class="">
             <a href="">
                 <img alt="واحد پژوهش شخصیت" class="dark:hidden"
@@ -87,7 +87,7 @@
                 </div>
                 <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
                 <div>
-                    <a data-cursor-text="ثبت نام" href="">ثبت نام</a>
+                    <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
                 </div>
             </div>
         </div>
@@ -95,8 +95,8 @@
 </header>
 
 
-<main class="flex">
-    <aside class="page-sidebar w-1/4 bg-sky-100 dark:bg-sky-900 fixed h-screen border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
+<main class="flex h-screen">
+    <aside class="page-sidebar w-1/4 bg-sky-100 h-screen dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
         <h3 class="c-aside_title text-end mt-5">
             <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle">menu</i>
         </h3>
@@ -106,25 +106,29 @@
                     <span class="text-lg font-iSans">تست ها</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
-                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">مایرز-بریگز</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انیاگرام</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">سوشیونیکز</a>
+                <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="#">مایرز-بریگز</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2"
+                       href="#">انیاگرام</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2"
+                       href="#">سوشیونیکز</a>
                 </div>
             </li>
             <li class="py-4 border-b c-blog_href border-sky-950 dark:border-sky-50">
-                <a class="aside-link flex items-center justify-between p-3" href="./blog.html">
+                <a class="aside-link aside-link_blog flex items-center justify-between p-3">
                     <span class="text-lg font-iSans">مقالات</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
-                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">شخصیت شولتز</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">شخصیت از نگاه یونگ</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">درون گرایی و برون گرایی</a>
+                <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="#">شخصیت شولتز</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">شخصیت از
+                        نگاه یونگ</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">درون گرایی
+                        و برون گرایی</a>
                 </div>
             </li>
             <li class="c-no_slide py-4 border-b border-sky-950 dark:border-sky-50">
-                <a class="aside-link flex items-center justify-between p-3" href="#">
+                <a class="aside-link flex items-center justify-between p-3">
                     <span class="text-lg font-iSans">دیتابیس</span>
                 </a>
             </li>
@@ -133,11 +137,15 @@
                     <span class="text-lg font-iSans">انجمن</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
-                <div class="child-menu hidden text-sm ml-5 mt-2 mr-6">
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block" href="#">انجمن واحد پژوهش شخصیت</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن مقالات</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن دیتابیس</a>
-                    <a class="hover:bg-sky-100 hover:rounded-xl dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن کاربران</a>
+                <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="#">انجمن واحد
+                        پژوهش شخصیت</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
+                        مقالات</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
+                        دیتابیس</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
+                        کاربران</a>
                 </div>
             </li>
         </ul>
@@ -148,7 +156,7 @@
 </main>
 
 
-<footer>
+<footer class="mx-0 my-0 h-80 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
 
 </footer>
 

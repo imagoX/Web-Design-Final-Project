@@ -11,9 +11,27 @@
     src: url(../../assets/fonts/iran-sans-master/fonts/IranianSansRegular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'pfont';
+    src: url(../../assets/fonts/Pfont/Pfont-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'anjoman';
+    src: url(../../assets/fonts/anjoman/Anjoman-Regular.woff2) format('woff2');
+}
+
 @layer components {
     .active {
         @apply bg-sky-200 dark:bg-slate-700 rounded;
+    }
+
+    #sticky-header {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #page-aside {
+        transition: height 0.3s ease-in-out;
     }
 }
 

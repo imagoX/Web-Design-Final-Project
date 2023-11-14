@@ -12,6 +12,8 @@ module.exports = {
             fontFamily: {
                 'iYekan': ['iranYekan'],
                 'iSans' : ['iranSans'],
+                'pfont' :['pfont'],
+                'anjoman' : ['anjoman'],
             },
         },
     },
