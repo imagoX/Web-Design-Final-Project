@@ -19,7 +19,7 @@
     </script>
 </head>
 <body class="font-pfont box-border dark:bg-sky-950 bg-gray-50">
-<div class="left-5 bottom-5 fixed">
+<div class="z-50 left-5 bottom-5 fixed">
     <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
             type="button">
@@ -35,75 +35,107 @@
         </svg>
     </button>
 </div>
-<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer" id="backToTop">
+<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer"
+        id="backToTop">
     <i class="material-icons">keyboard_arrow_up</i>
 </button>
-<header class="sticky top-0 z-10 w-full mx-0 h-auto my-0 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50"
+<header class="sticky top-0 z-10 w-full mx-0 h-auto my-0 bg-sky-100 dark:bg-sky-900 items-center justify-stretch pt-3 shadow shadow-black/30 dark:shadow-black/50"
         id="sticky-header">
-    <div class="w-1/4  px-5">
-        <div class="">
-            <a href="">
-                <img alt="واحد پژوهش شخصیت" class="dark:hidden"
-                     data-cursor-img="../assets/img/PRU_logo_light_transparent.svg"
-                     src="../assets/img/PRU_long_logo_light_transparent.svg">
-                <img alt="واحد پژوهش شخصیت" class="hidden dark:block"
-                     data-cursor-img="../assets/img/PRU_logo_dark_transparent.svg"
-                     src="../assets/img/PRU_long_logo_dark_transparent.svg">
-            </a>
+    <div class="flex pb-5 border-b border-b-gray-500 dark:border-b-gray-100">
+        <div class="w-1/4  px-5">
+            <div class="">
+                <a href="">
+                    <img alt="واحد پژوهش شخصیت" class="dark:hidden"
+                         data-cursor-img="../assets/img/PRU_logo_light_transparent.svg"
+                         src="../assets/img/PRU_long_logo_light_transparent.svg">
+                    <img alt="واحد پژوهش شخصیت" class="hidden dark:block"
+                         data-cursor-img="../assets/img/PRU_logo_dark_transparent.svg"
+                         src="../assets/img/PRU_long_logo_dark_transparent.svg">
+                </a>
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="w-1/2">
-        <form>
-            <label class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-                   for="default-search">جستجو</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                         fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor"
-                              stroke-linecap="round" stroke-linejoin="round"
-                              stroke-width="2"/>
-                    </svg>
+        <div class="w-1/2">
+            <form>
+                <label class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                       for="default-search">جستجو</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                             fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor"
+                                  stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <input class="block text-end placeholder:text-end w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-3xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           id="default-search"
+                           placeholder="جستجو کنید..."
+                           required type="search">
+                    <button class="text-white absolute right-2.5 bottom-2.5 bg-slate-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 dark:text-slate-800 dark:bg-slate-300 dark:hover:text-blue-50 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="submit">
+                        جستجو
+                    </button>
                 </div>
-                <input class="block text-end placeholder:text-end w-full p-4 pl-10 text-sm text-gray-900 border border-gray-400 rounded-3xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                       id="default-search"
-                       placeholder="جستجو کنید..."
-                       required type="search">
-                <button class="text-white absolute right-2.5 bottom-2.5 bg-slate-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-2 dark:text-slate-800 dark:bg-slate-300 dark:hover:text-blue-50 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="submit">
-                    جستجو
-                </button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
 
-    <div class="w-1/4">
-        <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
-            <div class="flex justify-center align-middle items-center">
-                <div>
-                    <a class="" data-cursor-text="ورود" href="">ورود</a>
-                </div>
-                <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
-                <div>
-                    <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
+        <div class="w-1/4">
+            <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
+                <div class="flex justify-center align-middle items-center">
+                    <div>
+                        <a class="" data-cursor-text="ورود" href="">ورود</a>
+                    </div>
+                    <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
+                    <div>
+                        <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <nav class="">
+        <div class="bg-sky-100 dark:bg-sky-900 text-sky-950 dark:text-sky-50">
+            <ul class="c-menu_header flex justify-around text-center">
+                <li class="m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-gray-500">
+                    <a class="flex items-center" href="#">
+                        <span class="text-sm">تست ها</span>
+                        <i class="material-icons mr-4 text-sm">chevron_left</i>
+                    </a>
+                </li>
+                <li class="m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-gray-500 divide-x divide-gray-500">
+                    <a class="flex items-center" href="#">
+                        <span class="text-sm">مقالات</span>
+                        <i class="material-icons mr-4 text-sm">chevron_left</i>
+                    </a>
+                </li>
+                <li class="m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-gray-500 divide-x divide-gray-500">
+                    <a class="flex items-center" href="#">
+                        <span class="text-sm">انجمن</span>
+                    </a>
+                </li>
+                <li class="m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-gray-500">
+                    <a class="flex items-center" href="#">
+                        <span class="text-sm">دیتابیس</span>
+                        <i class="material-icons mr-4 text-sm">chevron_left</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 
-<main class="flex h-screen">
-    <aside class="page-sidebar w-1/4 bg-sky-100 h-screen dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
+<main class="">
+    <aside class="page-sidebar lg:hidden md:max-lg:hidden max-md:block w-full bg-sky-100 dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
         <h3 class="c-aside_title text-end mt-5">
             <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle">menu</i>
         </h3>
         <ul class="sidebar-menu mt-5 mx-10">
             <li class="py-4 border-b border-sky-950 dark:border-sky-50">
                 <a class="aside-link flex items-center justify-between p-3" href="#">
-                    <span class="text-lg font-iSans">تست ها</span>
+                    <span class="text-lg  pu-iSans">تست ها</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
                 <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
@@ -156,7 +188,7 @@
 </main>
 
 
-<footer class="mx-0 my-0 h-80 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
+<footer class="absolute bottom-0 mx-0 my-0 h-80 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
 
 </footer>
 
