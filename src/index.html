@@ -19,8 +19,8 @@
     </script>
 </head>
 <body class="font-pfont box-border dark:bg-sky-950 bg-gray-50">
-<div class="z-50 left-5 bottom-5 fixed">
-    <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+<div class="max-lg:hidden z-50 left-5 bottom-5 fixed">
+    <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
             type="button">
         <svg class="hidden w-5 h-5" fill="currentColor" id="theme-toggle-dark-icon" viewBox="0 0 20 20"
@@ -35,22 +35,22 @@
         </svg>
     </button>
 </div>
-<button class="hidden fixed bottom-6 right-6 bg-blue-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 cursor-pointer"
-        id="backToTop">
-    <i class="material-icons">keyboard_arrow_up</i>
-</button>
 <header class="sticky top-0 z-10 w-full mx-0 h-auto my-0 bg-sky-100 dark:bg-sky-900 items-center justify-stretch pt-3 shadow shadow-black/30 dark:shadow-black/50"
         id="sticky-header">
-    <div class="flex pb-5 border-b border-b-gray-500 dark:border-b-gray-100">
+    <div class="flex items-center pb-5 border-b border-b-gray-500 dark:border-b-gray-100">
         <div class="w-1/4  px-5">
             <div class="">
                 <a href="">
-                    <img alt="واحد پژوهش شخصیت" class="dark:hidden"
+                    <img alt="واحد پژوهش شخصیت" class="dark:hidden max-md:hidden"
                          data-cursor-img="../assets/img/PRU_logo_light_transparent.svg"
                          src="../assets/img/PRU_long_logo_light_transparent.svg">
-                    <img alt="واحد پژوهش شخصیت" class="hidden dark:block"
+                    <img alt="واحد پژوهش شخصیت" class="hidden dark:block dark:max-md:hidden"
                          data-cursor-img="../assets/img/PRU_logo_dark_transparent.svg"
                          src="../assets/img/PRU_long_logo_dark_transparent.svg">
+                    <img alt="واحد پژوهش شخصیت" class="h-1/3 dark:hidden md:hidden"
+                         src="../assets/img/PRU_logo_light_transparent.svg">
+                    <img alt="واحد پژوهش شخصیت" class="h-1/3 hidden dark:block dark:md:hidden"
+                         src="../assets/img/PRU_logo_dark_transparent.svg">
                 </a>
             </div>
 
@@ -81,9 +81,9 @@
             </form>
         </div>
 
-        <div class="w-1/4">
-            <div class="bg-sky-800 text-sm text-sky-100 mx-28 py-3 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
-                <div class="flex justify-center align-middle items-center">
+        <div class="max-lg:hidden flex justify-center w-1/4">
+            <div class="bg-sky-800 text-sm text-sky-100 mx-2 py-3 px-4 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
+                <div class="flex justify-center items-center">
                     <div>
                         <a class="" data-cursor-text="ورود" href="">ورود</a>
                     </div>
@@ -94,78 +94,205 @@
                 </div>
             </div>
         </div>
+        <div class="lg:hidden flex justify-center w-1/4">
+            <div class="flex relative justify-center">
+                <i class="material-icons text-sky-800 dark:text-sky-100 text-[45px]">account_circle</i>
+                <div class="z-50 absolute top-full">
+                    <div class="">
+                        <div class="bg-sky-800 text-sm text-sky-100 mx-2 py-3 px-4 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+                            <div class="flex justify-center items-center">
+                                <div>
+                                    <a class="" data-cursor-text="ورود" href="">ورود</a>
+                                </div>
+                                <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
+                                <div>
+                                    <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <nav class="">
-        <div class="bg-sky-100 dark:bg-sky-900 text-sky-950 dark:text-sky-50">
-            <ul class="c-menu_header flex text-center">
-                <li class="group w-1/4 m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
-                    <a class="flex items-center" href="#">
+    <nav class="flex items-center max-lg:hidden lg:flex">
+        <div class="w-3/4 bg-sky-100 dark:bg-sky-900 text-sky-950 dark:text-sky-50">
+            <ul class="c-menu_header flex">
+                <li class="c-hover_change relative group/tests w-1/4 m-0 py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
+                    <a class="flex items-center justify-center" href="#">
                         <i class="material-icons ml-2 text-sky-800 dark:text-sky-200">quiz</i>
-                        <span class="text-sm">تست ها</span>
+                        <span class="text-xs">تست ها</span>
                         <i class="material-icons mr-4 text-sm">chevron_left</i>
                     </a>
-                    <div class="flex-col hidden group-hover:flex w-1/4 text-right border-t-sky-800 absolute top-full bg-sky-100 dark:bg-sky-900 right-0 border-t-2 border-sky-950 dark:border-sky-100">
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold"
-                           href="#">MBTI</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">کهن
-                            الگو</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold"
-                           href="#">DiSC</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">انیاگرام</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold"
-                           href="#">Socionics</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">سایر</a>
-                    </div>
+                    <ul class="flex-col hidden group-hover/tests:flex w-full text-right rounded border-t-sky-800 border-r-sky-800 absolute top-full bg-sky-100 dark:bg-sky-900 right-0 border-t-2 border-r-2 border-sky-950 dark:border-sky-100">
+                        <li class="group text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                            <a class="flex items-center" href="#">
+                                <span>MBTI</span>
+                                <i class="material-icons mr-4 text-sm">chevron_left</i>
+                            </a>
+                            <ul class="flex-col hidden group-hover:flex w-3/4 text-right rounded border-l-sky-800 absolute right-full bg-sky-100 dark:bg-sky-900 top-0 border-r-2 border-sky-950 dark:border-sky-100">
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                                    <a href="#">
+                                        <span>Sakinorva</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                                    <a href="#">
+                                        <span>16personalities</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>تست فارسی</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a href="#">
+                                <span>کهن الگو</span>
+                            </a>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                            <a href="#">
+                                <span>Disc</span>
+                            </a>
+                        </li>
+                        <li class="group text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a class="flex items-center" href="#">
+                                <span>انیاگرام</span>
+                                <i class="material-icons mr-4 text-sm">chevron_left</i>
+                            </a>
+                            <ul class="flex-col hidden group-hover:flex w-3/4 text-right rounded border-r-sky-800 absolute top-1/2 bg-sky-100 dark:bg-sky-900 right-full border-r-2 border-sky-950 dark:border-sky-100">
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                                    <a href="#">
+                                        <span>Truity</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>300 سوالی</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                            <a href="#">
+                                <span>Socionics</span>
+                            </a>
+                        </li>
+                        <li class=" group text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a class="flex items-center" href="#">
+                                <span>سایر</span>
+                                <i class="material-icons mr-4 text-sm">chevron_left</i>
+                            </a>
+                            <ul class="flex-col hidden group-hover:flex w-3/4 text-right rounded border-lrsky-800 absolute bottom-0 bg-sky-100 dark:bg-sky-900 right-full border-r-2 border-sky-950 dark:border-sky-100">
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                                    <a href="#">
+                                        <span>Big5</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800 font-iYekan font-semibold">
+                                    <a href="#">
+                                        <span>Holland Code</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>تریتایپ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="group w-1/4 m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
-                    <a class="flex items-center" href="#">
+                <li class="c-hover_change relative group/articles w-1/4 m-0 py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100 inline-block before:content-[''] before:inline-block before:w-[1px] before:h-[18px] before:-translate-y-1/2 before:top-1/2 before:absolute before:bg-sky-700 dark:before:bg-sky-100">
+                    <a class="flex items-center justify-center" href="#">
                         <i class="material-icons ml-2 text-sky-800 dark:text-sky-200">article</i>
                         <span class="text-sm">مقالات</span>
                         <i class="material-icons mr-4 text-sm">chevron_left</i>
                     </a>
-                    <div class="flex-col hidden group-hover:flex w-1/4 text-right border-t-sky-800 absolute top-full bg-sky-100 dark:bg-sky-900 right-1/4 border-t-2 border-sky-950 dark:border-sky-100">
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">خودشناسی</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">خودشناسی به سبک یونگ</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">رشد شخصیت</a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">ساب تایپ های <span class="font-iYekan font-semibold">DCNH</span></a>
-                        <a class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800"
-                           href="#">سایر</a>
-                    </div>
+                    <ul class="flex-col hidden group-hover/articles:flex w-full text-right rounded border-t-sky-800 border-r-sky-800 absolute top-full bg-sky-100 dark:bg-sky-900 right-0 border-t-2 border-r-2 border-sky-950 dark:border-sky-100">
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a href="#">
+                                <span>خودشناسی</span>
+                            </a>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a href="#">
+                                <span>تاثیر یونگ بر مایرز</span>
+                            </a>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a href="#">
+                                <span>رشد شخصیت</span>
+                            </a>
+                        </li>
+                        <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a href="#">
+                                <span>ساب تایپ های <span class="font-iYekan font-semibold">DCNH</span></span>
+                            </a>
+                        </li>
+                        <li class=" group text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                            <a class="flex items-center" href="#">
+                                <span>سایر</span>
+                                <i class="material-icons mr-4 text-sm">chevron_left</i>
+                            </a>
+                            <ul class="flex-col hidden group-hover:flex w-3/4 text-right rounded border-r-sky-800 absolute bottom-0 bg-sky-100 dark:bg-sky-900 right-full border-r-2 border-sky-950 dark:border-sky-100">
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>نظریه متابولیسم اطلاعات</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>ایگو و انیاگرام</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>کدام تست دقیق تر است؟</span>
+                                    </a>
+                                </li>
+                                <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
+                                    <a href="#">
+                                        <span>آیزنک</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="w-1/4 m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
-                    <a class="flex items-center" href="#">
+                <li class="w-1/4 m-0 py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100 relative inline-block before:content-[''] before:inline-block before:w-[1px] before:h-[18px] before:-translate-y-1/2 before:top-1/2 before:absolute before:bg-sky-700 dark:before:bg-sky-100">
+                    <a class="flex items-center justify-center" href="#">
                         <i class="material-icons ml-2 text-sky-800 dark:text-sky-200">forum</i>
                         <span class="text-sm">انجمن</span>
                     </a>
                 </li>
-                <li class="w-1/4 m-0 px-[100px] py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
-                    <a class="flex items-center" href="#">
+                <li class="w-1/4 m-0 py-4 hover:-mt-[4px] hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100 relative inline-block before:content-[''] before:inline-block before:w-[1px] before:h-[18px] before:-translate-y-1/2 before:top-1/2 before:absolute before:bg-sky-700 dark:before:bg-sky-100">
+                    <a class="flex items-center justify-center" href="#">
                         <i class="material-icons ml-2 text-sky-800 dark:text-sky-200">equalizer</i>
                         <span class="text-sm">دیتابیس</span>
                     </a>
                 </li>
             </ul>
         </div>
+        <div class="flex justify-center w-1/4 ">
+            <a class="mx-2 py-3 px-4 rounded-xl text-sky-950 dark:text-sky-100 hover:cursor-pointer hover:text-sky-100 hover:dark:text-sky-950 hover:before:block hover:before:absolute before:-inset-1 before:-skew-y-6 before:bg-sky-800 dark:before:bg-sky-200 relative inline-block">
+                <span class="text-sm relative ">تایپ شو!</span>
+            </a>
+        </div>
     </nav>
-</header>
-
-
-<main class="">
-    <aside class="page-sidebar lg:hidden md:max-lg:hidden max-md:block w-full bg-sky-100 dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
-        <h3 class="c-aside_title text-end mt-5">
-            <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle">menu</i>
+    <aside class="page-sidebar lg:hidden max-lg:block w-full bg-sky-100 dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
+        <h3 class="c-aside_title text-end my-1">
+            <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle"
+               id="i-aside_icon">menu</i>
         </h3>
-        <ul class="sidebar-menu mt-5 mx-10">
-            <li class="py-4 border-b border-sky-950 dark:border-sky-50">
+        <ul class="hidden sidebar-menu mt-5 mx-10">
+            <li class="py-2 border-b border-sky-950 dark:border-sky-50">
                 <a class="aside-link flex items-center justify-between p-3" href="#">
-                    <span class="text-lg  pu-iSans">تست ها</span>
+                    <span class="text-sm  pu-iSans">تست ها</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
                 <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
@@ -176,9 +303,9 @@
                        href="#">سوشیونیکز</a>
                 </div>
             </li>
-            <li class="py-4 border-b c-blog_href border-sky-950 dark:border-sky-50">
+            <li class="py-2 border-b c-blog_href border-sky-950 dark:border-sky-50">
                 <a class="aside-link aside-link_blog flex items-center justify-between p-3">
-                    <span class="text-lg font-iSans">مقالات</span>
+                    <span class="text-sm font-iSans">مقالات</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
                 <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
@@ -189,29 +316,35 @@
                         و برون گرایی</a>
                 </div>
             </li>
-            <li class="c-no_slide py-4 border-b border-sky-950 dark:border-sky-50">
+            <li class="c-no_slide py-2 border-b border-sky-950 dark:border-sky-50">
                 <a class="aside-link flex items-center justify-between p-3">
-                    <span class="text-lg font-iSans">دیتابیس</span>
+                    <span class="text-sm font-iSans">دیتابیس</span>
                 </a>
             </li>
-            <li class="py-4">
+            <li class="c-no_slide py-2 border-b c-blog_href border-sky-950 dark:border-sky-50">
                 <a class="aside-link flex items-center justify-between p-3" href="#">
-                    <span class="text-lg font-iSans">انجمن</span>
+                    <span class="text-sm font-iSans">انجمن</span>
+                </a>
+
+            </li>
+            <li class="py-2">
+                <a class="aside-link flex items-center justify-between p-3" href="#">
+                    <span class="text-sm font-iSans">تنظیمات</span>
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
                 <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="#">انجمن واحد
-                        پژوهش شخصیت</a>
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
-                        مقالات</a>
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
-                        دیتابیس</a>
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">انجمن
-                        کاربران</a>
+                    <a class="c-dark_mode_md block hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2"
+                       href="#">
+                        <span>حالت تاریک/روشن</span>
+                    </a>
                 </div>
             </li>
         </ul>
     </aside>
+</header>
+
+
+<main class="">
     <div class="bg-gray-50">
 
     </div>

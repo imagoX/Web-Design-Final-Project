@@ -33,6 +33,9 @@
     #page-aside {
         transition: height 0.3s ease-in-out;
     }
+    .c-hover_change > ul {
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 @tailwind utilities;
