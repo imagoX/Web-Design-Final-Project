@@ -95,21 +95,35 @@
             </div>
         </div>
         <div class="lg:hidden flex justify-center w-1/4">
-            <div class="flex relative justify-center">
-                <i class="material-icons text-sky-800 dark:text-sky-100 text-[45px]">account_circle</i>
-                <div class="z-50 absolute top-full">
-                    <div class="">
-                        <div class="bg-sky-800 text-sm text-sky-100 mx-2 py-3 px-4 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+            <div class="group/login flex relative justify-center">
+                <i class="material-icons text-sky-800 dark:text-sky-100 text-[45px] mb-2">account_circle</i>
+                <div class="w-32 group-hover/login:block z-50 absolute top-full">
+                    <div class="relative">
+                        <div class="absolute -top-[6px] right-[60px] w-0 h-0
+                            border-l-[4px] border-l-transparent
+                            border-b-[6px] border-b-sky-800 dark:border-b-sky-200
+                            border-r-[4px] border-r-transparent">
+                        </div>
+
+                        <div class="relative bg-sky-800 text-sm text-sky-100 py-3 px-4 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+                            <div class="w-full text-[10px] mb-3">
+                                <p>ایمیل:</p>
+                                <input class="w-full rounded-xl mb-1" type="email">
+                                <p>رمز عبور:</p>
+                                <input class="w-full rounded-xl" type="password">
+                            </div>
                             <div class="flex justify-center items-center">
-                                <div>
-                                    <a class="" data-cursor-text="ورود" href="">ورود</a>
+                                <div class="bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+                                    <a class="text-[10px] bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200" href="#">ورود</a>
                                 </div>
                                 <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
-                                <div>
-                                    <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
+                                <div class="bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+                                    <a class="text-[9px]" href="#">ثبت نام</a>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
