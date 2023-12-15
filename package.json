@@ -4,9 +4,14 @@
     "build": "npx tailwindcss -i ./src/css/style.css -o ./assets/css/main.css --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
   },
   "dependencies": {
+    "gsap": "^3.12.3",
+    "jquery": "^3.7.1",
+    "mouse-follower": "^1.1.2",
     "tw-elements": "^1.0.0"
   }
 }

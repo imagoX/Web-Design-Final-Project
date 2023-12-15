@@ -26,6 +26,9 @@
         @apply bg-sky-200 dark:bg-slate-700 rounded;
     }
 
+    .active-footer {
+        @apply bg-sky-200 dark:bg-slate-800 border-b-4 border-b-sky-900 dark:border-b-sky-100 !important;
+    }
     #sticky-header {
         transition: transform 0.3s ease-in-out;
     }

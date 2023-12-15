@@ -74,7 +74,24 @@ $(document).ready(function () {
         isSlidedDown = !isSlidedDown;
     });
 
+//login panel toggle
+    $(document).mouseup(function (e) {
+        let container = $(".c-login_block");
+        let button = $('.c-login_click');
+        if (!container.is(e.target) && container.has(e.target).length === 0 && !button.is(e.target)) {
+            container.addClass('hidden').removeClass('block');
+        }
+    });
+    $('.c-login_click').on('click', function (e) {
+        e.stopPropagation();
+        $('.c-login_block').toggleClass('hidden block');
+    });
 
+//footer click toggle
+    $('.c-footer_click > div').click(function () {
+        $('.c-footer_click > div.active-footer').removeClass('active-footer');
+        $(this).addClass('active-footer');
+    });
 
 // Back to top
 
@@ -135,11 +152,3 @@ $(document).ready(function () {
     });
 
 });
-
-
-
-
-
-
-
-

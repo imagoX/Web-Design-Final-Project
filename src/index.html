@@ -10,6 +10,7 @@
           rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/img/icon1.svg" rel="icon">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -20,7 +21,7 @@
 </head>
 <body class="font-pfont box-border dark:bg-sky-950 bg-gray-50">
 <div class="max-lg:hidden z-50 left-5 bottom-5 fixed">
-    <button class="text-gray-100 bg-gray-700 dark:bg-gray-100 dark:text-gray-400 hover:text-gray-700 hover:bg-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+    <button class="text-gray-100 bg-gray-700 dark:bg-gray-300 dark:text-gray-600 hover:text-gray-950 dark:hover:text-gray-100 hover:bg-gray-500 dark:hover:bg-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             id="theme-toggle"
             type="button">
         <svg class="hidden w-5 h-5" fill="currentColor" id="theme-toggle-dark-icon" viewBox="0 0 20 20"
@@ -85,27 +86,26 @@
             <div class="bg-sky-800 text-sm text-sky-100 mx-2 py-3 px-4 rounded-3xl dark:text-sky-950 dark:bg-sky-200">
                 <div class="flex justify-center items-center">
                     <div>
-                        <a class="" data-cursor-text="ورود" href="">ورود</a>
+                        <a class="" data-cursor-text="ورود" href="./login.html">ورود</a>
                     </div>
                     <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
                     <div>
-                        <a class="text-xs" data-cursor-text="ثبت نام" href="">ثبت نام</a>
+                        <a class="text-xs" data-cursor-text="ثبت نام" href="./login.html">ثبت نام</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="lg:hidden flex justify-center w-1/4">
-            <div class="group/login flex relative justify-center">
-                <i class="material-icons text-sky-800 dark:text-sky-100 text-[45px] mb-2">account_circle</i>
-                <div class="w-32 group-hover/login:block z-50 absolute top-full">
+            <div class="flex relative justify-center">
+                <i class="c-login_click material-icons text-sky-800 dark:text-sky-100 text-[45px] mb-2">account_circle</i>
+                <div class="c-login_block w-32 mt-3 ml-12 hidden z-50 absolute top-full">
                     <div class="relative">
-                        <div class="absolute -top-[6px] right-[60px] w-0 h-0
+                        <div class="absolute -top-[6px] left-[36px] w-0 h-0
                             border-l-[4px] border-l-transparent
                             border-b-[6px] border-b-sky-800 dark:border-b-sky-200
                             border-r-[4px] border-r-transparent">
                         </div>
-
-                        <div class="relative bg-sky-800 text-sm text-sky-100 py-3 px-4 rounded-lg dark:text-sky-950 dark:bg-sky-200">
+                        <div class="relative bg-sky-800 text-base text-sky-100 py-3 px-2 rounded-lg dark:text-sky-950 dark:bg-sky-200">
                             <div class="w-full text-[10px] mb-3">
                                 <p>ایمیل:</p>
                                 <input class="w-full rounded-xl mb-1" type="email">
@@ -113,12 +113,12 @@
                                 <input class="w-full rounded-xl" type="password">
                             </div>
                             <div class="flex justify-center items-center">
-                                <div class="bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200">
-                                    <a class="text-[10px] bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200" href="#">ورود</a>
+                                <div class="hover:bg-sky-200 hover:text-sky-950 hover:rounded hover:dark:text-sky-100 hover:dark:bg-sky-800">
+                                    <a class="text-[10px] px-1" href="./login.html">ورود</a>
                                 </div>
                                 <div class="mx-3 h-[20px] bg-sky-200 dark:bg-sky-800 w-[1px]"></div>
-                                <div class="bg-sky-800 text-sky-100 rounded-lg dark:text-sky-950 dark:bg-sky-200">
-                                    <a class="text-[9px]" href="#">ثبت نام</a>
+                                <div class="hover:bg-sky-200 hover:text-sky-950 hover:rounded hover:dark:text-sky-100 hover:dark:bg-sky-800">
+                                    <a class="text-[9px] px-1" href="./login.html">ثبت نام</a>
                                 </div>
                             </div>
 
@@ -158,7 +158,7 @@
                                 </li>
                                 <li class="text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
                                     <a href="#">
-                                        <span>تست فارسی</span>
+                                        <span class="font-pfont font-normal">تست فارسی</span>
                                     </a>
                                 </li>
                             </ul>
@@ -249,7 +249,7 @@
                             </a>
                         </li>
                         <li class=" group text-xs bg-sky-100 hover:bg-sky-200 py-3 pr-8 hover:rounded dark:bg-sky-900 dark:hover:bg-sky-800">
-                            <a class="flex items-center" href="#">
+                            <a class="flex items-center" href="./blog.html">
                                 <span>سایر</span>
                                 <i class="material-icons mr-4 text-sm">chevron_left</i>
                             </a>
@@ -298,12 +298,15 @@
             </a>
         </div>
     </nav>
-    <aside class="page-sidebar lg:hidden max-lg:block w-full bg-sky-100 dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
-        <h3 class="c-aside_title text-end my-1">
+    <aside class="page-sidebar border-b border-b-sky-900 dark:border-b-sky-100 lg:hidden max-lg:block w-full bg-sky-100 dark:bg-sky-900 fixed border-t-2 border-sky-950 dark:border-sky-50 text-sky-950 dark:text-sky-50">
+        <h3 class="c-aside_title flex items-center justify-between my-1">
+            <a class="mx-2 py-3 px-4 rounded-xl text-sky-950 dark:text-sky-100 hover:cursor-pointer hover:text-sky-100 hover:dark:text-sky-950 hover:before:block hover:before:absolute before:-inset-1 before:-skew-y-6 before:bg-sky-800 dark:before:bg-sky-200 relative inline-block">
+                <span class="text-sm relative ">تایپ شو!</span>
+            </a>
             <i class="material-icons p-3 hover:bg-sky-900 hover:text-sky-50 dark:hover:text-sky-900 dark:hover:bg-sky-200 hover:rounded-full ml-3 cursor-pointer toggle"
                id="i-aside_icon">menu</i>
         </h3>
-        <ul class="hidden sidebar-menu mt-5 mx-10">
+        <ul class="hidden sidebar-menu my-2 mx-10">
             <li class="py-2 border-b border-sky-950 dark:border-sky-50">
                 <a class="aside-link flex items-center justify-between p-3" href="#">
                     <span class="text-sm  pu-iSans">تست ها</span>
@@ -323,10 +326,10 @@
                     <i class="material-icons chevron-icon">chevron_left</i>
                 </a>
                 <div class="text-xs child-menu hidden ml-5 mt-2 mr-6">
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="#">شخصیت شولتز</a>
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">شخصیت از
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block" href="./blog.html">شخصیت شولتز</a>
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="./blog.html">شخصیت از
                         نگاه یونگ</a>
-                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="#">درون گرایی
+                    <a class="hover:bg-sky-100 hover:rounded dark:hover:bg-slate-600 p-2 block mt-2" href="./blog.html">درون گرایی
                         و برون گرایی</a>
                 </div>
             </li>
@@ -365,14 +368,37 @@
 </main>
 
 
-<footer class="absolute bottom-0 mx-0 my-0 h-80 bg-sky-100 dark:bg-sky-900 flex items-center justify-stretch py-3 shadow shadow-black/30 dark:shadow-black/50">
+<footer class="">
+    <!-- lg footer -->
+    <section class="lg:hidden c-footer_click w-full absolute bottom-0 mx-0 my-0 h-18 bg-sky-100 dark:bg-sky-900 text-sky-950 dark:text-sky-50 flex items-center justify-stretch py-0 shadow shadow-black/30 dark:shadow-black/50 font-iYekan border-t border-t-sky-900 dark:border-t-sky-100">
+        <div class="w-1/3 py-4 border-b-4 border-b-transparent border-t-4 border-t-transparent hover:border-b-4 hover:border-b-sky-900 dark:hover:border-b-sky-100 hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
+            <a href="#" class="flex items-center justify-center">
+                <i class="material-icons ml-2 text-sky-900 dark:text-sky-200">menu</i>
+                <span>منو</span>
+            </a>
 
+        </div>
+        <div class="active-footer w-1/3 py-4 border-b-4 border-b-transparent border-t-4 border-t-transparent hover:border-b-4 hover:border-b-sky-900 dark:hover:border-b-sky-100 hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
+            <a href="#" class="flex items-center justify-center">
+                <i class="material-icons ml-2 text-sky-900 dark:text-sky-200">home</i>
+                <span>خانه</span>
+            </a>
+
+        </div>
+        <div class="w-1/3 py-4 border-b-4 border-b-transparent border-t-4 border-t-transparent hover:border-b-4 hover:border-b-sky-900 dark:hover:border-b-sky-100 hover:border-t-4 hover:border-t-sky-900 dark:hover:border-t-sky-100">
+            <a href="#" class="flex items-center justify-center">
+                <i class="material-icons ml-2 text-sky-900 dark:text-sky-200">headset_mic</i>
+                <span>پشتیبانی</span>
+            </a>
+
+        </div>
+    </section>
+    <!-- ordinary footer -->
+    <section>
+
+    </section>
 </footer>
 
-
-<script crossorigin="anonymous"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script>
